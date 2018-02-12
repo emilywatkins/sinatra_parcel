@@ -6,6 +6,6 @@ class Parcel
   end
 
   def volume
-
+    @depth * @width * @height
   end
 end
