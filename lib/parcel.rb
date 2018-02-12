@@ -10,6 +10,6 @@ class Parcel
     @depth * @width * @height
   end
   def cost_to_ship
-    
+    @depth * @width * @height * @weight
   end
 end
