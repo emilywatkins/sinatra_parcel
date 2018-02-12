@@ -9,9 +9,9 @@ get ('/') do
 end
 
 get('/output') do
-  @depth = params.fetch("depth")
-  @width = params.fetch("width")
-  @height = params.fetch("height")
+  @depth = params.fetch("depth").to_i
+  @width = params.fetch("width").to_i
+  @height = params.fetch("height").to_i
   parcel = Parcel.new(@depth, @width, @height)
   @string_to_display = parcel.volume
   erb(:output)
