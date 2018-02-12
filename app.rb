@@ -12,7 +12,8 @@ get('/output') do
   @depth = params.fetch("depth").to_i
   @width = params.fetch("width").to_i
   @height = params.fetch("height").to_i
-  parcel = Parcel.new(@depth, @width, @height)
+  @weight = params.fetch("weight").to_i
+  parcel = Parcel.new(@depth, @width, @height, @weight)
   @string_to_display = parcel.volume
   erb(:output)
 end
